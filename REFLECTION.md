@@ -33,5 +33,5 @@ This project implements user registration and authentication, plus BREAD operati
 - Add monitoring for the deployed container and health-check endpoints beyond `/health`.
 
 ## Notes for graders
-- The repository's GitHub Actions workflow will push Docker images only if you set `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` in repository secrets. After that, successful runs will create images at `hub.docker.com/r/<DOCKERHUB_USERNAME>/fastapi-calculator`.
+- The repository's GitHub Actions workflow will push Docker images only if you set `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` in repository secrets. After that, successful runs will create images at `hub.docker.com/r/maxstern623/fastapi-calculator`.
 

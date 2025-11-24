@@ -91,12 +91,12 @@ After CI pushes the image, it will be published under your Docker Hub account wi
 Docker image (example):
 
 ```
-docker pull <DOCKERHUB_USERNAME>/fastapi-calculator:latest
+docker pull maxstern623/fastapi-calculator:latest
 ```
 
 Add your Docker Hub link here once the image is pushed:
 
-- Docker Hub repository: https://hub.docker.com/r/<DOCKERHUB_USERNAME>/fastapi-calculator
+- Docker Hub repository: https://hub.docker.com/r/maxstern623/fastapi-calculator
 
 ### How to verify CI ran successfully
 
