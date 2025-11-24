@@ -84,6 +84,33 @@ To enable CI pushing, add these repository secrets:
 - `DOCKERHUB_USERNAME` — Docker Hub username
 - `DOCKERHUB_TOKEN` — Docker Hub access token (or password)
 
+### Docker Hub image link
+
+After CI pushes the image, it will be published under your Docker Hub account with the repository name `fastapi-calculator` by default. Replace the placeholders below with your Docker Hub username.
+
+Docker image (example):
+
+```
+docker pull <DOCKERHUB_USERNAME>/fastapi-calculator:latest
+```
+
+Add your Docker Hub link here once the image is pushed:
+
+- Docker Hub repository: https://hub.docker.com/r/<DOCKERHUB_USERNAME>/fastapi-calculator
+
+### How to verify CI ran successfully
+
+1. Push a commit to `main` or open a PR against `main`.
+2. Go to the repository Actions tab on GitHub and open the latest workflow run.
+3. Confirm the `test` job passed and then the `security` and `deploy` jobs completed successfully.
+4. (Optional) In the `deploy` job logs, confirm the `docker/build-push-action` step displays the image tags and `push: true` output.
+
+To create the screenshots required for submission:
+
+- GitHub Actions workflow: open the run page and take a screenshot showing all jobs green/successful.
+- Application in browser: run the app locally (`uvicorn app.main:app`) and open `/docs`, then perform register/login and create a calculation — take screenshots of the successful responses or the OpenAPI UI.
+
+
 ## Notes and troubleshooting
 
 - The tests run uvicorn using the same Python interpreter as pytest to ensure all environment dependencies are available.
